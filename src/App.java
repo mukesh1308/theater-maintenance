@@ -18,7 +18,7 @@ public class App {
             System.out.println("Database not connecter.");
             return;
         }
-        Manager.start();
+        BookingClerk.start();
         while(true){
             System.out.println("1.view");
             System.out.println("2.login");
