@@ -12,16 +12,16 @@ public class App {
             System.out.println("Database not connecter.");
             return;
         }
-
+        
         while(true){
             System.out.println("1.view");
             System.out.println("2.login");
             System.out.println("3.exit");
             System.out.println();
-            System.out.println("enter your choice: ");
+            System.out.print("enter your choice: ");
             int choice=Input.sc.nextInt();
             if(choice==1){
-                
+
             }
             else if(choice==2){
 
