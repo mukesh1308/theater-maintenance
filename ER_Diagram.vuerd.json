@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -760.6449000000001,
-    "scrollLeft": -558.97195,
-    "zoomLevel": 0.2,
+    "scrollTop": -439.87840000000006,
+    "scrollLeft": -494.35815,
+    "zoomLevel": 1,
     "show": {
       "tableComment": false,
       "columnComment": false,
@@ -230,7 +230,7 @@
           "active": false,
           "left": 981.9758,
           "top": 93.6032,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -361,7 +361,7 @@
           "active": false,
           "left": 325.0609,
           "top": 281.5751,
-          "zIndex": 7,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -515,7 +515,7 @@
           "active": false,
           "left": 1243.6697,
           "top": 521.9083,
-          "zIndex": 52,
+          "zIndex": 9,
           "widthName": 60,
           "widthComment": 60
         },
@@ -600,7 +600,7 @@
           "active": false,
           "left": 151.9499,
           "top": 595.2978,
-          "zIndex": 8,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -725,13 +725,36 @@
               "widthDataType": 60,
               "widthDefault": 60
             }
+          },
+          {
+            "id": "6cf170c8-70bf-47ab-8363-4ce41636d6f2",
+            "name": "release_date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77.1689453125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            }
           }
         ],
         "ui": {
           "active": false,
           "left": 592.0603,
           "top": 683.4918,
-          "zIndex": 51,
+          "zIndex": 15,
           "widthName": 60,
           "widthComment": 60
         },
@@ -862,7 +885,7 @@
           "active": false,
           "left": 848.5599,
           "top": 393.9362,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 95.9453125,
           "widthComment": 60
         },
@@ -1094,7 +1117,7 @@
           "active": false,
           "left": 1567.4063,
           "top": 744.5923,
-          "zIndex": 57,
+          "zIndex": 10,
           "widthName": 72.82080078125,
           "widthComment": 60
         },
@@ -1144,18 +1167,18 @@
           "columnIds": [
             "cd1ef41e-ebf2-4523-b07c-d081bcb4deaf"
           ],
-          "x": 979.66528046875,
-          "y": 726.3668,
-          "direction": "right"
+          "x": 785.862790234375,
+          "y": 683.4918,
+          "direction": "top"
         },
         "end": {
           "tableId": "061ec1c6-aeaa-4c27-9b20-68e9850c31d2",
           "columnIds": [
             "c95c92ca-0d09-484e-be6b-0bfa9e1a9627"
           ],
-          "x": 1018.753015234375,
-          "y": 565.4362,
-          "direction": "bottom"
+          "x": 848.5599,
+          "y": 522.5612,
+          "direction": "left"
         },
         "constraintName": "fk_movie_to_movie_schedule",
         "visible": true
@@ -1198,7 +1221,7 @@
             "1792bb37-1dd4-4b04-8c5e-6879278a3623"
           ],
           "x": 848.5599,
-          "y": 479.6862,
+          "y": 436.8112,
           "direction": "left"
         },
         "end": {
@@ -1260,7 +1283,7 @@
             "292ba60f-44c7-43df-9c9b-5ea21529c596"
           ],
           "x": 592.0603,
-          "y": 769.2418,
+          "y": 779.4918,
           "direction": "left"
         },
         "constraintName": "fk_genres_to_movie",
@@ -1286,7 +1309,7 @@
             "13ed3b01-b09a-4f0e-8682-77594e082752"
           ],
           "x": 979.66528046875,
-          "y": 812.1168,
+          "y": 779.4918,
           "direction": "right"
         },
         "constraintName": "fk_languages_to_movie",

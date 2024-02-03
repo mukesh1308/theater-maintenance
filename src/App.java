@@ -1,9 +1,12 @@
 import java.sql.SQLException;
 
 import database.Connect;
-import database.InsertData;
+import database.Login;
 import utils.Input;
 import utils.resource;
+import view.BookingClerk;
+import view.Manager;
+import view.Viewer;
 
 public class App {
     public static void main(String[] args){
@@ -15,13 +18,7 @@ public class App {
             System.out.println("Database not connecter.");
             return;
         }
-        // try{
-        //     resource.insert.addEmployee("k sathya", "manager", "M", "sathya210304@gmail.com", "1234");
-        //     resource.insert.addEmployee("m mukesh kumar", "booking clerk", "M", "mukeshkumar130803@gmail.com", "yashini@070202");
-        // }
-        // catch(SQLException err){
-        //     System.out.println(err);
-        // }
+        Manager.start();
         while(true){
             System.out.println("1.view");
             System.out.println("2.login");
@@ -29,11 +26,41 @@ public class App {
             System.out.println();
             System.out.print("enter your choice: ");
             int choice=Input.sc.nextInt();
+            Input.sc.nextLine();
+            System.out.println();
             if(choice==1){
-
+                Viewer.start();
+                System.out.println();
             }
             else if(choice==2){
-
+                System.out.print("Enter your Email: ");
+                String email=Input.sc.nextLine();
+                System.out.print("Enter Password: ");
+                String password=Input.sc.nextLine();
+                System.out.println();
+                try{
+                    int check=Login.check(email, password);
+                    if(check==1){
+                        System.out.println("booking clerk");
+                        System.out.println();
+                        BookingClerk.start();
+                    }
+                    else if(check==2){
+                        System.out.println("manager");
+                        System.out.println();
+                        Manager.start();
+                    }
+                    else if(check==-1){
+                        System.out.println("not a employee");
+                    }
+                    else{
+                        System.out.println("Invalid password");
+                    }
+                }
+                catch(SQLException err){
+                    System.out.println("DB error");
+                }
+                System.out.println();
             }
             else{
                 break;
