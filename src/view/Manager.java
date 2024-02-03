@@ -59,13 +59,36 @@ public class Manager {
                 }
             }
             else if(choice==6){ 
-                
+
             }
             else if(choice==7){
-    
+                try{
+                    System.out.print("Enter employee name: ");
+                    String name=Input.sc.nextLine();
+                    System.out.print("Enter gender (M/F): ");
+                    String gender=Input.sc.nextLine().toUpperCase();
+                    System.out.print("Enter email: ");
+                    String email=Input.sc.nextLine();
+                    System.out.print("Enter password: ");
+                    String password=Input.sc.nextLine();
+                    System.out.println();
+                    resource.insert.addEmployee(name, "booking clerk", gender, email, password);
+                }
+                catch(SQLException err){
+                    System.out.println("DB error");
+                }
             }
             else if(choice==8){
-    
+                try{
+                    System.out.print("Enter employee id: ");
+                    int emp=Input.sc.nextInt();
+                    Input.sc.nextLine();
+                    System.out.println();
+                    resource.delete.removeEmployee(emp);
+                }
+                catch(SQLException err){
+                    System.out.println("DB error");
+                }
             }
             else if(choice==9){
                 Cookie.empId=-1;
