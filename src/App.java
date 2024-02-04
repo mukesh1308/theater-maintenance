@@ -15,10 +15,9 @@ public class App {
             resource.init();
         }
         catch(SQLException err){
-            System.out.println("Database not connecter.");
+            System.out.println("Database not connected.");
             return;
         }
-        BookingClerk.start();
         while(true){
             System.out.println("1.view");
             System.out.println("2.login");

@@ -99,7 +99,7 @@ public class InsertData extends Connect{
         System.out.println("-".repeat(60));
         System.out.printf("%-40s:%-20d\n","seat("+bill.seat+")",bill.seatCost);
         System.out.printf("%-40s:%-20d\n","screen("+bill.screenType+" "+bill.screenSize+"feet)",bill.screenCost);
-        System.out.printf("%-40s:%-20d\n","seat("+bill.movieDuration+"min)",bill.movieCost);
+        System.out.printf("%-40s:%-20d\n","movie("+bill.movieDuration+"min)",bill.movieCost);
         System.out.println("-".repeat(60));
         int total=bill.movieCost+bill.screenCost+bill.seatCost;
         System.out.printf("%-40s:%-20d\n","total",total);
