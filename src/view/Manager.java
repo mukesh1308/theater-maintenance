@@ -29,7 +29,13 @@ public class Manager {
             Input.sc.nextLine();
             System.out.println();
             if(choice==1){
-    
+                try{
+                    resource.display.todayRevenue(resource.today);
+                }
+                catch(SQLException err){
+                    System.out.println(err);
+                    System.out.println("DB error");
+                }
             }
             else if(choice==2){
                 try{
@@ -41,7 +47,7 @@ public class Manager {
                     Input.sc.nextLine();
                     System.out.println();
                     if(c2==1){
-                        resource.display.displaySchedule();
+                        resource.display.displaySchedule(resource.today);
                     }
                     else if(c2==2){
                         System.out.print("Enter date (yyyy-mm-dd): ");
@@ -123,7 +129,31 @@ public class Manager {
                 }
             }
             else if(choice==6){ 
-
+                try{
+                    System.out.println("1.Top revenue");
+                    System.out.println("2.find movie");
+                    System.out.println();
+                    System.out.println("Enter your choice: ");
+                    int c6=Input.sc.nextInt();
+                    Input.sc.nextLine();
+                    System.out.println();
+                    if(c6==1){
+                        System.out.print("Enter top: ");
+                        int top=Input.sc.nextInt();
+                        Input.sc.nextLine();
+                        resource.display.movieReportTop(top);
+                    }
+                    else if(c6==2){
+                        System.out.print("Enter movie id: ");;
+                        int id=Input.sc.nextInt();
+                        Input.sc.nextLine();
+                        resource.display.movieReport(id);
+                    }
+                }
+                catch(SQLException err){
+                    System.out.println(err);
+                    System.out.println("DB error");
+                }
             }
             else if(choice==7){
                 try{
